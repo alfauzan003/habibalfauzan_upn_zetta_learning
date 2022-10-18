@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Form</title>
 </head>
 <body>
     <h1 align="center">
-        Form HTML
+        User Form
     </h1>
     <table>
         <tr>
@@ -17,9 +17,59 @@
             <td><input type="text" name="nama"></td>
         </tr>
         <tr>
-            <td></td>
+            <td><label for="lahir">Tempat Lahir</label></td>
             <td>:</td>
-            <td><input type="text" name="nama"></td>
+            <td><input type="text" name="lahir"></td>
+        </tr>
+        <tr>
+            <td><label for="date">Tanggal Lahir</label></td>
+            <td>:</td>
+            <td><input type="date" name="tanggal"></td>
+        </tr>
+        <tr>
+            <td><label for="Hobby">Hobby:</label></td>
+            <td>:</td>
+            <td><input type="Text" name="Hobby"></td>
+        </tr>
+        <tr>
+            <td><label for="Usia">Usia:</label></td>
+            <td>:</td>
+            <td><input type="number" name="Usia" id="Usia"></td>
+        </tr>
+        <tr>
+            <td><label for="jeniskelamin">Jenis kelamin</label></td>
+            <td>:</td>
+            <td>
+                <input type="radio" name="jeniskelamin" value="Pria"> pria
+                <input type="radio" name="jeniskelamin" value="wanita"> Wanita
+            </td>
+        </tr>
+        <tr>
+            <td><label for="telepon">Nomor Telepon</label></td>
+            <td>:</td>
+            <td><input type="tel" name="telepon" value="+62"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Alamat Email</label></td>
+            <td>:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td><label for="sosmed">Link Social Media</label></td>
+            <td>:</td>
+            <td><input type="url" name="sosmed"></td>
+        </tr>
+        <tr>
+            <td><label for="testimoni">Testimoni</label></td>
+            <td>:</td>
+            <td><textarea name="testimoni" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td>
+                <br>
+                <button type="submit">Kirim</button>
+                <button type="reset">Reset</button>
+            </td>
         </tr>
     </table>
 </body>
