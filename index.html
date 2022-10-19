@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperHero Profile</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Day 1 Project 2</title>
+    <style>
+        div {
+            width: 800px;
+            margin: auto;
+            padding: 16px;
+            background-color: gainsboro;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .row-1 {
+            background-color: green;
+        }
+
+        .row-2 {
+            background-color: red;
+        }
+
+        .row-3 {
+            background-color: blue;
+        }
+
+        td {
+            border: 2px solid black;
+        }
+    </style>
 </head>
-<body>
-    <h1 style="text-align: center;">Batman's Profile</h1>
-    <div style="width: 800px; margin: auto; padding: 16px; background-color: gainsboro;">
-        <p style="font-size: 30px; color:red; font-family:sans-serif;">Bruce Wayne</p>
-        <img src="https://static.wikia.nocookie.net/characterprofile/images/9/92/Batman-ArkhamKnight-BatsuitRender.png/revision/latest?cb=20160110024920" alt="" width="100">
-        <table>
-            <tr style="font-family:sans-serif">
-                <td >Debut Date</td>
-                <td>:</td>
-                <td>March 30, 1939</td>
-            </tr>
-            <tr style="color: green; font-family:sans-serif">
-                <td>Superpower</td>
-                <td>:</td>
-                <td>Intellect, Fighting skills, Wealth</td>
-            </tr>
-            <tr>
-                <td>Profile:</td>
-                <td>:</td>
-                <td>Bruce Wayne, better known as Batman, is a billionaire superhero from DC Comics. He is known for his lack of superpowers and being a founding member of the Justice League.</td>
-            </tr>
-        </table>
-    </div>
+
+<body style="font-family: sans-serif">
+        <div>
+            <h1>Embeded Styling</h1>
+            <table>
+                <thead>
+                    <td>Hobby</td>
+                    <td>Favorite Movies</td>
+                    <td>Favorite Song</td>
+                </thead>
+                <tbody>
+                    <tr class="row-1">
+                        <td>Catur</td>
+                        <td>Kimi no Nawa</td>
+                        <td>Mari Bercerita</td>
+                    </tr>
+                    <tr class="row-2">
+                        <td>Jogging</td>
+                        <td>Boboiboy The Movie 1</td>
+                        <td>Untuk Perempuan Yang Sedang di Pelukan</td>
+                    </tr>
+                    <tr class="row-3">
+                        <td>Bulutangkis</td>
+                        <td>Avenger: Infinity Wars</td>
+                        <td>Anything you want</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 </body>
+
 </html>
