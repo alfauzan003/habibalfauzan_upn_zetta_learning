@@ -1,6 +1,9 @@
 * {
     font-family: sans-serif;
     color: black;
+    box-sizing: border-box;
+        padding: 0;
+        margin: 0;
 }
 
 #header {
@@ -9,27 +12,34 @@
 
 .container {
     background-color: grey;
-    margin-left: 250px;
-    margin-right: 250px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 50px;
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
     border-radius: 30px;
     border: 3px solid black;
 
 }
 
 .card {
+    width: 250px;
+    height: 500px;
     background-color: white;
-    margin: 50px 100px 50px 100px;
     border: 2px solid black;
     box-shadow: 5px 5px 5px black;
+    margin: 20px 0 20px 0;
+    display: inline-block;
 }
+
+
 
 img {
     display: block;
     margin: auto;
     padding: 30px 0 30px 0;
-    width: 200px;
+    width: 100px;
 }
 
 .card h3{
@@ -38,6 +48,6 @@ img {
 }
 
 .card p{
-    padding: 0 100px 0 100px;
+    padding: 0 10px 0 10px;
     text-align: justify;
 }
