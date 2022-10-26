@@ -2,8 +2,7 @@ const book = (
     {name:"a Brief History of Time", price:60000, isPurchased: false, stock:100}
 );
 
-function bookpurchase (name, discount, tax, itemAmount) {
-    let pay = 0;
+function bookpurchase (name, discount, tax, itemAmount, credit) {
     let stock = book.stock;
     const price = book.price;
     const discountAmount = (discount/100) * price;
@@ -27,10 +26,10 @@ function bookpurchase (name, discount, tax, itemAmount) {
 totalPriceToPay = totalPriceAfterDiscount + totalTax;
 if (book && itemAmount <= stock) {
     console.group();
-    console.log("Judul Buku : ", book.name);
-    console.log("Harga Satuan : ", price);
-    console.log("Jumlah yang dibeli : ", itemAmount);
-    console.log("Total harga keseluruhan : ", totalBooksPrice);
+    console.log("Judul : ", book.name);
+    console.log("Harga Original: ", price);
+    console.log("Jumlah pembelian : ", itemAmount);
+    console.log("Total harga: ", totalBooksPrice);
     console.log("Persentase diskon : ", discount, "%");
     console.log("Biaya setelah diskon : ", totalPriceAfterDiscount);
     console.log("Pajak : ", tax, "%");
@@ -42,9 +41,22 @@ if (book && itemAmount <= stock) {
     } else {
         console.log("Stok masih ada, anda bisa membeli lagi");
     }
+    console.log("");
+    console.log("Anda melakukan cicilan sebanyak ", credit, " kali");
     console.groupEnd();
 }
+let creditPerMonth = totalPriceToPay / credit;
+let creditToPay = [];
+let i = 0;
+
+while (i < credit) {
+    creditToPay.push({
+        cicilan_ke: i + 1,
+        pembayaran: creditPerMonth,
+    });
+    i++;
+}
+console.log(Array.from(creditToPay));
 return totalPriceToPay;
 }
-
-bookpurchase(book, 50, 50, 50);
+bookpurchase(book, 50, 50, 50, 10);
