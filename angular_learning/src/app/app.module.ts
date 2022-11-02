@@ -1,22 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ItemInputComponent } from './item-input/item-input.component';
-import { ItemOutputComponent } from './item-output/item-output.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { InputTaskComponent } from './input-item/input-item.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ItemInputComponent,
-    ItemOutputComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [AppComponent, TasksComponent, InputTaskComponent],
+   imports: [BrowserModule, FormsModule],
+   providers: [],
+   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
