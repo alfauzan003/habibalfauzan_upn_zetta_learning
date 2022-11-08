@@ -1,0 +1,9 @@
+<h3>Input here</h3>
+<input type="text" name="item-name" #itemNameInput>
+<h3>Item Status</h3>
+<input type="radio" value="Success" [(ngModel)]="newItemStatus"> Success <br>
+<input type="radio" value="Error" [(ngModel)]="newItemStatus"> Error<br>
+<!-- <p> {{itemStatus}} </p> -->
+<button (click)="addItem(itemNameInput)" class="btn btn-secondary"
+    [disabled]="itemNameInput === '' || newItemStatus === '' ">Add
+    Item</button>
