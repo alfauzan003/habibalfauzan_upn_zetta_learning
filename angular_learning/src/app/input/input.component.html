@@ -5,10 +5,10 @@
             <input required matInput [value]="defaultName" placeholder="your item name" #itemName />
         </mat-form-field>
     </p>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" style="color: black;">
         <mat-label>Select</mat-label>
         <mat-select required placeholder="Select Item Status" #itemStatus name="item" [(value)]="defaultStatus">
-            <mat-option value="Success" selected="selected">Success</mat-option>
+            <mat-option value="Success" selected="selected" style="color: black;">Success</mat-option>
             <mat-option value="Not Bad">Not Bad</mat-option>
             <mat-option value="Failed">Failed</mat-option>
         </mat-select>
