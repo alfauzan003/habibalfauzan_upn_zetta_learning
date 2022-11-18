@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-
 //Angular Material Components
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -35,16 +34,25 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
-
+import { MatButtonModule } from '@angular/material/button';
+import { ContentMovieComponent } from './movie/content-movie/content-movie.component';
+import { ContentActorComponent } from './actor/content-actor/content-actor.component';
+import { ContentAboutComponent } from './about/content-about/content-about.component';
+import { MoviesDataService } from './data/movies-data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContentMovieComponent,
+    ContentActorComponent,
+    ContentAboutComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
+    BrowserModule,
+    MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
     MatDatepickerModule,
@@ -74,7 +82,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatSortModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [MoviesDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
